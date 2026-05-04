@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troll Yin Yang</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .logo-link {
+      display: block;
+      line-height: 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .logo {
+      width: min(144vw, 560px);
+      max-width: calc(100vw - 24px);
+      height: auto;
+      display: block;
+      border-radius: 50%;
+      animation: spin 14s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="logo-link" id="community" href="#" aria-label="Community">
+    <img class="logo" src="./assets/logo.jpeg" alt="" width="560" height="560" />
+  </a>
+  <script>
+    (function () {
+      var COMMUNITY_URL = "https://t.me/";
+      document.getElementById("community").href = COMMUNITY_URL;
+    })();
+  </script>
+</body>
+</html>
