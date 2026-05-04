@@ -27,16 +27,10 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare static site
-        run: |
-          mkdir -p _site/assets
-          cp index.html _site/
-          cp assets/logo.jpeg _site/assets/
-
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: trolana-site
 
       - name: Deploy
         id: deployment
